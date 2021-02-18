@@ -5,12 +5,15 @@
  */
 package quiz;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author raisa
  */
 public abstract class Question {    
-    private int score;
+    private int score = 3;
+    private ArrayList<String> questions;
     
     public void setScore(){
         
@@ -21,16 +24,10 @@ public abstract class Question {
      * @return
      */
     @Override
-    public String toString(){
-        return "";
-    }
+    public abstract String toString();
     
-    public boolean isCorrect(String answer){
-        return true;
-    }
+    public abstract boolean isCorrect(String answer);
     
-    public String correctAnswer(){
-        return "";
-    }
+    public abstract String correctAnswer();
     
 }
